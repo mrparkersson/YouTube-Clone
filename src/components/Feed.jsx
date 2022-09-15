@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Typography, Stack } from '@mui/material';
-import { Sidebar } from '../components';
+import { Sidebar, Videos } from '../components';
 
 const Feed = () => {
   return (
@@ -31,6 +31,7 @@ const Feed = () => {
           New <span style={{ color: '#f31503' }}>videos</span>
         </Typography>
       </Box>
+      <Videos videos={[]} />
     </Stack>
   );
 };
