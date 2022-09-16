@@ -13,6 +13,10 @@ const options = {
 };
 
 export const fetchData = async (url) => {
-  const { data } = await axios.get(`${BASE_URL}/${url}`, options);
-  return await data;
+  try {
+    const { data } = await axios.get(`${BASE_URL}/${url}`, options);
+    return await data;
+  } catch (error) {
+    console.error(error.message);
+  }
 };
