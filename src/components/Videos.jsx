@@ -4,7 +4,7 @@ import { VideoCard, ChannelCard } from '../components';
 
 const Videos = ({ videos }) => {
   return (
-    <div>
+    <Stack direction="row" flexWrap="wrap" justifyContent="start" gap={2}>
       {videos.map((video, index) => {
         return (
           <Box key={index}>
@@ -13,7 +13,7 @@ const Videos = ({ videos }) => {
           </Box>
         );
       })}
-    </div>
+    </Stack>
   );
 };
 

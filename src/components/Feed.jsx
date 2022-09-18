@@ -39,8 +39,8 @@ const Feed = () => {
           {selectedCat}
           <span style={{ color: '#f31503' }}>videos</span>
         </Typography>
+        <Videos videos={videos} />
       </Box>
-      <Videos videos={videos} />
     </Stack>
   );
 };
