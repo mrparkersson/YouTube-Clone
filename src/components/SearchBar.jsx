@@ -8,10 +8,13 @@ const SearchBar = () => {
   const searchTermHandler = (e) => {
     setSearchTerm(e.target.value);
   };
-
+  const navigate = useNavigate();
   const onSearchSubmit = (e) => {
     e.preventDefault();
-    setSearchTerm('');
+    if (searchTerm) {
+      navigate(`/search/${searchTerm}`);
+      setSearchTerm('');
+    }
   };
   return (
     <Paper
